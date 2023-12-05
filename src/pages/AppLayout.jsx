@@ -1,4 +1,3 @@
-
 import styles from "./AppLayout.module.css";
 import Sidbar from "../components/Sidebar";
 import Map from "../components/Map";
