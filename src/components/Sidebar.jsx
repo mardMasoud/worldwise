@@ -8,7 +8,7 @@ export default function Sidbar() {
         <div className={styles.sidebar}>
             <Logo />
             <AppNav />
-           <Outlet/>
+          <Outlet/>
             <footer className={styles.footer}>
                 <p className={styles.copyright}>
                     &copy; Copyright {new Date().getUTCFullYear()} by WorldWise Inc.
