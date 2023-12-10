@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate } from "react-router-dom";
 import Product from "./pages/Product";
 import Homepage from "./pages/Homepage";
 import Pricing from "./pages/Pricing";
@@ -36,14 +36,14 @@ function App() {
                 <Route path="login" element={<Login />} />
                 <Route path="/" element={<Homepage />} />
                 <Route path="app" element={<AppLayout />}>
-                    <Route index element={<CityList cities={cities} isLoading={isLoading} />} />
+                    <Route index element={<Navigate replace to='cities'/>} />
                     <Route
                         path="cities"
                         element={<CityList cities={cities} isLoading={isLoading} />}
                     />
                     <Route path="countries" element={<CountryList cities={cities} isLoading={isLoading}/>} />
                     <Route path='cities/:id' element={<City cities={cities}/>} />
-                    <Route path='form' element={<Form/>}/>} />
+                    <Route path='form' element={<Form/>}/>
                 </Route>
                 <Route path="*" element={<PageNotFound />} />
             </Routes>
