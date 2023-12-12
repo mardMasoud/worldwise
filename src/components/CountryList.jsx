@@ -1,8 +1,9 @@
 import styles from "./CountryList.module.css";
 import CountryItem from "./CountryItem";
-export default function CountryList({ cities }) {
+import { useCities } from "../context/CitiesContext";
+export default function CountryList() {
     let countries = [];
-
+const { cities } = useCities()
     countries = cities.reduce((acc, cur) => {
         if (acc.some((_) => _.country === cur.country)) return acc;
        //if(acc.map(_=>_.country).includes(cur.country)) return acc ---By map and includes 
