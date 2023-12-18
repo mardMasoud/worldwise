@@ -2,6 +2,8 @@ import { useParams, useSearchParams } from "react-router-dom";
 import styles from "./City.module.css";
 import { useCities } from "../context/CitiesContext";
 import { useEffect } from "react";
+import Spinner from "./Spinner";
+import BackButton from "./BackButton";
 
 const formatDate = (date) =>
     new Intl.DateTimeFormat("en", {
@@ -13,24 +15,25 @@ const formatDate = (date) =>
 
 function City() {
     const { id } = useParams();
-  const [params, setParams] = useSearchParams()
-  const {getcity,currentCity} = useCities()
- useEffect(function(){
-    getcity(id)
- },[id])
-    
-    
+    const [params, setParams] = useSearchParams();
+    const { getcity, currentCity, isLoading } = useCities();
+    useEffect(
+        function () {
+            getcity(id);
+        },
+        [id]
+    );
 
-const lat = params.get('lat')
-const lng = params.get('lng')
+    const lat = params.get("lat");
+    const lng = params.get("lng");
     //  const x=cities.find((city)=>city.id==id)
     //  console.log(x)
     const { cityName, emoji, date, notes } = currentCity;
-   
+    if (isLoading) return <Spinner />;
     return (
         <div className={styles.city}>
             <div className={styles.row}>
-            <h6>{lat}</h6>
+                <h6>{lat}</h6>
                 <h6>City name</h6>
                 <h3>
                     <span>{emoji}</span> {cityName}
@@ -59,8 +62,10 @@ const lng = params.get('lng')
                     Check out {cityName} on Wikipedia &rarr;
                 </a>
             </div>
-
-            <div>{/* <ButtonBack /> */}</div>
+            <div>
+             
+                <BackButton />
+            </div>
         </div>
     );
 }
