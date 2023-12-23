@@ -1,40 +1,40 @@
 {
-    "cities": [
-        {
-            "cityName": "Lisbon",
-            "country": "Portugal",
-            "emoji": "🇵🇹",
-            "date": "2027-10-31T15:59:59.138Z",
-            "notes": "My favorite city so far!",
-            "position": {
-                "lat": 38.727881642324164,
-                "lng": -9.140900099907554
-            },
-            "id": 73930385
-        },
-        {
-            "cityName": "Madrid",
-            "country": "Spain",
-            "emoji": "🇪🇸",
-            "date": "2027-07-15T08:22:53.976Z",
-            "notes": "",
-            "position": {
-                "lat": 40.46635901755316,
-                "lng": -3.7133789062500004
-            },
-            "id": 17806751
-        },
-        {
-            "cityName": "Berlin",
-            "country": "Germany",
-            "emoji": "🇩🇪",
-            "date": "2027-02-12T09:24:11.863Z",
-            "notes": "Amazing 😃",
-            "position": {
-                "lat": 52.53586782505711,
-                "lng": 13.376933665713324
-            },
-            "id": 98443197
-        }
-    ]
+  "cities": [
+    {
+      "cityName": "Madrid",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2027-07-15T08:22:53.976Z",
+      "notes": "",
+      "position": {
+        "lat": 40.46635901755316,
+        "lng": -3.7133789062500004
+      },
+      "id": 17806751
+    },
+    {
+      "cityName": "Lles de Cerdanya",
+      "country": "Spain",
+      "emoji": "🇪🇸",
+      "date": "2023-12-23T16:12:33.239Z",
+      "notes": "",
+      "position": {
+        "lat": "42.439674178149446",
+        "lng": "1.7138671875000002"
+      },
+      "id": 17806752
+    },
+    {
+      "cityName": "Generalski Stol",
+      "country": "Croatia",
+      "emoji": "🇭🇷",
+      "date": "2023-12-23T16:12:40.061Z",
+      "notes": "",
+      "position": {
+        "lat": "45.3521452458518",
+        "lng": "15.402832031250002"
+      },
+      "id": 17806753
+    }
+  ]
 }
